@@ -8,3 +8,5 @@ Võrgurakendused I kodused ülesanded
 2016-03-06. Lisasin koduse töö number 3. Töö koosneb järgnevatest failidest: css-bot.html, stiilid.html ja kodune3.html. Kodutöö on nähtav Enoses: http://enos.itcollege.ee/~srekkaro/kodused/kolm/
 
 2016-03-13. Lisasin koduse töö number 4. Töö koosneb järgnevatest failidest: abakus.html, CssTarget.html ja duck.png. Kodutöö on nähtav Enoses: http://enos.itcollege.ee/~srekkaro/kodused/neli/
+
+2016-03-19. Lisasin koduse töö number 5. Töö koosneb järgnevatest failidest: abakus2.html, abakus.js ja CssTarget2.html. Kodutöö on nähtav Enoses: http://enos.itcollege.ee/~srekkaro/kodused/viis/
