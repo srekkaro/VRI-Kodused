@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>CssTarget2</title>
+		<style type="text/css">
+			#ymbris { height: 500px;
+				width: 500px;
+				position: fixed;
+				top: 20px;
+				left: 20px;
+			}
+			
+			body {background-color:#0A24A9;}		
+			#part {
+				height:100%;
+				width:100%;
+				position: fixed;		
+			}
+			
+			.rongas { position: absolute;
+				border-radius: 50%;
+				border-style: solid;
+		}
+			#ymbris div:nth-child(1) {	
+				height: 90%;
+				width: 90%;
+				border-color: red;
+				background-color: red;
+				left: 25px;
+				top: 25px;	
+		}
+			#ymbris div:nth-child(2) {	
+				height: 75%;
+				width: 75%;
+				border-color: white;
+				background-color: white;
+				left: 62px;
+				top: 62px;		
+		}
+			#ymbris div:nth-child(3) {	
+				height: 60%;
+				width: 60%;		
+				border-color: red;
+				background-color: red;
+				left: 100px;
+				top: 100px;	
+		}
+			#ymbris div:nth-child(4) {	
+				height: 45%;
+				width: 45%;
+				border-color: white;
+				background-color: white;
+				left: 138px;
+				top: 138px;		
+		}
+			#ymbris div:nth-child(5) {	
+				height: 30%;
+				width: 30%;
+				border-color: red;
+				background-color: red;
+				left: 175px;
+				top: 175px;		
+		}
+			#ymbris :nth-child(6) {		
+				height: 15%;
+				width: 15%;
+				border-color: white;
+				background-color: white;
+				left: 213px;
+				top: 213px;	
+		}
+		</style>
+		<script>
+			window.onload = function() {
+				marklaud=document.getElementById('ymbris');
+				marklaud.onclick = function() {
+					var vasak = Math.random()* 1000;
+					var ylevalt = Math.random()* 500;
+					vasak = Math.round(vasak) + "px";
+					ylevalt = Math.round(ylevalt) + "px";
+					marklaud.style.top=ylevalt;
+					marklaud.style.left=vasak;
+				}	
+			}
+		</script>
+	</head>
+	<body>
+		<img id="part" src="duck.png" alt="Kus part on?"/>
+		<div id="ymbris">
+			<div class="rongas">
+			</div>
+			<div class="rongas">
+			</div>
+			<div class="rongas">
+			</div>
+			<div class="rongas">
+			</div>
+			<div class="rongas">
+			</div>
+			<div class="rongas">
+			</div>
+		</div>
+	</body>
+</html>
