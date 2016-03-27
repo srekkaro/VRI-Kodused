@@ -11,4 +11,4 @@ Võrgurakendused I kodused ülesanded
 
 2016-03-19. Lisasin koduse töö number 5. Töö koosneb järgnevatest failidest: abakus2.html, abakus.js ja CssTarget2.html. Kodutöö on nähtav Enoses: http://enos.itcollege.ee/~srekkaro/kodused/viis/
 
-2016-03-27. Lisasin koduse töö number 6. Töö koosneb failist loop.html. Kodutöö on nähtav Enoses: http://enos.itcollege.ee/~srekkaro/kodused/kuus/loop.html
+2016-03-27. Lisasin koduse töö number 6 koos praktikumi number kuus lahendustega. Töö koosneb failidest loop.html, menu.html ja menu2.html. Kodutöö ja praktikumi ülesanded on nähtavad Enoses: http://enos.itcollege.ee/~srekkaro/kodused/kuus/ 
