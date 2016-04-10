@@ -13,4 +13,7 @@ Võrgurakendused I kodused ülesanded
 
 2016-03-27. Lisasin koduse töö number 6 koos praktikumi number kuus lahendustega. Töö koosneb failidest loop.html, menu.html ja menu2.html. Kodutöö ja praktikumi ülesanded on nähtavad Enoses: http://enos.itcollege.ee/~srekkaro/kodused/kuus/ 
 
-2016-04-03. Lisasin koduse töö number7 lahendused. Kodutne töö koosneb failidest: seitse-yl1.php, seitse-yl2.php, includeMassiiv.php ja dokument.html. Koduse töö ülesannete lahendused on nähtavad Enoses: http://enos.itcollege.ee/~srekkaro/kodused/seitse/
+2016-04-03. Lisasin koduse töö number7 lahendused. Kodune töö koosneb failidest: seitse-yl1.php, seitse-yl2.php, includeMassiiv.php ja dokument.html. Koduse töö ülesannete lahendused on nähtavad Enoses: http://enos.itcollege.ee/~srekkaro/kodused/seitse/
+
+2016-04-10. Lisasin koduse töö number 8 lahendused. Kodune töö koosneb failidest kaheksa-yl1.php ja kaheksa-yl2.php. Koduse töö ülesannete lahendused on nähtavad Enoses: http://enos.itcollege.ee/~srekkaro/kodused/kaheksa.
+Selguse mõttes tõstsin iga koduse töö lahendused eraldi kaustadesse.
