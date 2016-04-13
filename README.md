@@ -17,3 +17,5 @@ Võrgurakendused I kodused ülesanded
 
 2016-04-10. Lisasin koduse töö number 8 lahendused. Kodune töö koosneb failidest kaheksa-yl1.php ja kaheksa-yl2.php. Koduse töö ülesannete lahendused on nähtavad Enoses: http://enos.itcollege.ee/~srekkaro/kodused/kaheksa.
 Selguse mõttes tõstsin koduste tööde lahendused eraldi kaustadesse.
+
+2016-04-13. Lisasin koduse töö number 9 lahendused. Kodune töö koosneb Eraldi PHP lehtedega juhitavast lehest ja ühe, kontroller.php lehega juhitavast saidist. Tööd on vastavalt kaustades 09-kodune/multipage ja 09-kodune/kontrolleriga.
