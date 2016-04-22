@@ -19,3 +19,5 @@ Võrgurakendused I kodused ülesanded
 Selguse mõttes tõstsin koduste tööde lahendused eraldi kaustadesse.
 
 2016-04-13. Lisasin koduse töö number 9 lahendused. Kodune töö koosneb Eraldi PHP-failidega juhitavast galeriilehest ja ühe, kontroller.php lehega juhitavast galerii saidist. Tööd on vastavalt kaustades 09-kodune/multipage ja 09-kodune/kontrolleriga.
+
+2016-04-22. Lisaisn koduse töö number 10 lahendused. Avastasin, et olin esimese ülesande juba kaheksanda koduse töö käigus ära lahendanud. Galerii kodutööle lisasin sessioonid. Ühe sessiooni käigus on võimalik ainult üks kord pilti valida. Pildi uuesti valimiseks tuleb sessioon tühistada. Tühistamiseks on galeriil eraldi link. Koduse töö lahendused on nähtavad enoses: http://enos.itcollege.ee/~srekkaro/kodused/kymme/
