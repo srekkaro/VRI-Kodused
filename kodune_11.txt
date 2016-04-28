@@ -1,0 +1,32 @@
+#1.Uue tabeli "srekkaro_loomaaed" loomine:
+	CREATE TABLE srekkaro_loomaaed (
+		id INTEGER PRIMARY KEY auto_increment,
+		nimi VARCHAR(255),
+		vanus INTEGER,
+		liik VARCHAR(255),
+		puur INTEGER
+		);
+		
+#2. Loodud tabeli täitmine:
+	INSERT INTO srekkaro_loomaaed (nimi, vanus, liik, puur) VALUES
+		('Bruuno', '6', 'ondatra', '46'),
+		('Benno', '8', 'okaapi', '04'),
+		('Bernhard', '36', 'kilpkonn', '46'),
+		('Benjamin', '1', 'laama', '04'),
+		('Benita', '2', 'kivikana', '13'),
+		('Braun', '4', 'kukkurkurat', '18'),
+		('Bhup', '47', 'orangutan', '01'),
+		('Bibin', '99', 'vombat', '11'),
+		('Bella', '23', 'orangutan', '13');
+		
+		
+#3. Hankida kõigi mingis ühes kindlas puuris elavate loomade nimi ja puuri number
+		SELECT * FROM srekkaro_loomaaed WHERE puur=46;
+		
+#4. Hankida vanima ja noorima looma vanused
+		SELECT min(vanus) as noorimLoom, max(vanus) as vanimLoom FROM srekkaro_loomaaed;
+		
+#5. Hankida puuri number koos selles elavate loomade arvuga (vihjeks: group by ja count )
+		SELECT puur, count(*) as loomi FROM srekkaro_loomaaed GROUP BY puur;
+#6. Suurendada kõiki tabelis olevaid vanuseid 1 aasta võrra
+		UPDATE srekkaro_loomaaed SET vanus=vanus+1;
