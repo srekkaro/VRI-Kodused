@@ -7,7 +7,7 @@
 		puur INTEGER
 		);
 		
-#2. Loodud tabeli t‰itmine:
+#2. Loodud tabeli t√§itmine:
 	INSERT INTO srekkaro_loomaaed (nimi, vanus, liik, puur) VALUES
 		('Bruuno', '6', 'ondatra', '46'),
 		('Benno', '8', 'okaapi', '04'),
@@ -20,7 +20,7 @@
 		('Bella', '23', 'orangutan', '13');
 		
 		
-#3. Hankida kıigi mingis ¸hes kindlas puuris elavate loomade nimi ja puuri number
+#3. Hankida k√µigi mingis √ºhes kindlas puuris elavate loomade nimi ja puuri number
 		SELECT * FROM srekkaro_loomaaed WHERE puur=46;
 		
 #4. Hankida vanima ja noorima looma vanused
@@ -28,5 +28,5 @@
 		
 #5. Hankida puuri number koos selles elavate loomade arvuga (vihjeks: group by ja count )
 		SELECT puur, count(*) as loomi FROM srekkaro_loomaaed GROUP BY puur;
-#6. Suurendada kıiki tabelis olevaid vanuseid 1 aasta vırra
+#6. Suurendada k√µiki tabelis olevaid vanuseid 1 aasta v√µrra
 		UPDATE srekkaro_loomaaed SET vanus=vanus+1;
