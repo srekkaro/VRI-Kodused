@@ -1,0 +1,12 @@
+<?php
+	if (isset($puurid)){
+		print_r($puurid);
+		foreach($puurid as $koht){
+			?><div>Puur number:<?php
+			print_r(array_keys($koht));
+			?>/div><?php			
+			
+		}
+}
+?>
+		
