@@ -23,3 +23,5 @@ Selguse mõttes tõstsin koduste tööde lahendused eraldi kaustadesse.
 2016-04-22. Lisaisn koduse töö number 10 lahendused. Avastasin, et olin esimese ülesande juba kaheksanda koduse töö käigus ära lahendanud. Galerii kodutööle lisasin sessioonid. Ühe sessiooni käigus on võimalik ainult üks kord pilti valida. Pildi uuesti valimiseks tuleb sessioon tühistada. Tühistamiseks on galeriil eraldi link. Koduse töö lahendused on nähtavad enoses: http://enos.itcollege.ee/~srekkaro/kodused/kymme/
 
 2016-04-28. Lisasin koduse töö number 11 lahenduse.
+
+2016-05-08. Lisasin koduse töö number 12. Koduse töö lahendus on kaustas "Loomaaed". Testida saab tööd Enoses: enos.itcollege.ee/kodused/kaksteist/loomaaed.php
