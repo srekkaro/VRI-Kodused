@@ -1,10 +1,15 @@
 <?php
 	if (isset($puurid)){
-		print_r($puurid);
-		foreach($puurid as $koht){
-			?><div>Puur number:<?php
-			print_r(array_keys($koht));
-			?>/div><?php			
+		foreach($puurid as $puur => $v22rtus){
+			?><div class="puur"><h5>Puur number: </h5><?php
+				echo "$puur\n";
+				foreach($v22rtus as $loom){
+					?><div>
+						<?php $loom="pildid/".$loom.".png";?>
+						<img src= <?php echo "$loom"; ?> />
+					</div><?php	
+				}
+			?></div><?php			
 			
 		}
 }
