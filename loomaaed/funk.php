@@ -31,10 +31,10 @@ function kuva_puurid(){
 	$tulemus= mysqli_query($connection, $puuride_numbrid) or die ("Viga andmebaasis - ".mysqli_error($connection));
 	while ($rida = mysqli_fetch_assoc($tulemus)){
 		$mitmes_puur=$rida['puur'];
-		$loomade_p2ring="SELECT nimi FROM srekkaro_loomaaed WHERE puur=$mitmes_puur";
+		$loomade_p2ring="SELECT liik FROM srekkaro_loomaaed WHERE puur=$mitmes_puur";
 		$tulemus2=mysqli_query($connection, $loomade_p2ring) or die ("Viga andmebaasis - ".mysqli_error($connection));
 		while ($rida2 = mysqli_fetch_assoc($tulemus2)){
-				$puurid[$rida['puur']][]=$rida2['nimi'];
+				$puurid[$rida['puur']][]=$rida2['liik'];
 			}
 	}
 	ksort($puurid);
