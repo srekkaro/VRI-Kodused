@@ -1,5 +1,5 @@
 <?php
-
+$errors=array();
 
 function connect_db(){
 	global $connection;
@@ -12,10 +12,41 @@ function connect_db(){
 }
 
 function logi(){
-	// siia on vaja funktsionaalsust (13. nädalal)
+	global $connection;
+	global $errors;
+	if (!empty($_SESSION['user'])){
+		header("Location: ?page=loomad");	
+	}
+	if ($_SERVER['REQUEST_METHOD']=='GET'){
+		include_once('views/login.html');
+	}
+	if ($_SERVER['REQUEST_METHOD']=='POST'){
+		if (empty($_POST["user"])){
+			$errors[]= "Kasutajaväli ei saa olla tühi!";
+		}
+		if (empty($_POST["pass"])){
+			$errors[]="Parool ei saa olla tühi!";
+		}
+		if (!empty($errors)){
+				include_once('views/login.html');
+				}
+		}
+		if (!empty($_POST)){
+				$kasutaja= mysqli_real_escape_string($connection, $_POST["user"]);
+				$parool= mysqli_real_escape_string($connection, $_POST["pass"]);
+				$p2ring="SELECT id FROM srekkaro_kylastajad WHERE username = '$kasutaja' AND passw = SHA1('$parool')";
+				$result=mysqli_query($connection, $p2ring);
+				if (mysqli_num_rows($result)>0){
+					$_SESSION['user']=$p2ring['id'];
+					header("Location: ?page=loomad");
+				}
+				if (mysqli_num_rows($result)==0){
+				$errors[]= "Sellist kasutajat ei leitud!";
+				include_once('views/login.html');
+			}
+		}
+	}
 
-	include_once('views/login.html');
-}
 
 function logout(){
 	$_SESSION=array();
@@ -25,6 +56,9 @@ function logout(){
 
 function kuva_puurid(){
 	global $connection;
+	if (empty($_SESSION['user'])){
+		header("Location: ?page=login");	
+	}
 	$puurid=array();
 	$puuride_numbrid="SELECT DISTINCT puur FROM srekkaro_loomaaed";
 
@@ -38,16 +72,56 @@ function kuva_puurid(){
 			}
 	}
 	ksort($puurid);
-	?><pre><?php
+/*	?><pre><?php
 	print_r($puurid);
 	?></pre><?php
-
+*/
 	include_once('views/puurid.html');
 	
 }
 
 function lisa(){
-	// siia on vaja funktsionaalsust (13. nädalal)
+	global $connection;
+	$asukoht="";
+	if (empty($_SESSION['user'])){
+		header("Location: ?page=login");	
+	}
+	if ($_SERVER['REQUEST_METHOD']=='GET'){
+		include_once('views/loomavorm.html');
+	}
+	if ($_SERVER['REQUEST_METHOD']=='POST'){
+		if (empty($_POST["nimi"])){
+			$errors[]= "Loomal peab olema nimi!";
+		}
+		if (empty($_POST["puur"])){
+			$errors[]="Loomal peab olema puur!";
+		}
+		if (!empty($_FILES['pilt']['name'])){
+			$asukoht=upload('pilt');
+		}
+		if ($asukoht==""){
+				$errors[]="Loomal peab olema liik/pilt!";
+			}
+		$nimi=mysqli_real_escape_string($connection, $_POST["nimi"]);
+		$puur=mysqli_real_escape_string($connection, $_POST["puur"]);
+		$vanus=mysqli_real_escape_string($connection, $_POST["vanus"]);
+		$tmp=explode(".", $asukoht);
+		$tmp2=explode("/", $tmp[0]);
+		$liik=end($tmp2);
+		$liik=mysqli_real_escape_string($connection, $liik);	
+		if (empty($errors)){
+				$sql= "INSERT INTO srekkaro_loomaaed ( nimi, vanus, puur, liik) VALUES ('$nimi', '$vanus', '$puur', '$liik')";
+				$tulemus=mysqli_query($connection, $sql);
+				$viga= mysqli_error($connection);
+				print_r($viga);	
+					if ($tulemus){
+						if(mysqli_affected_rows($connection)>0){
+							header("Location: ?page=loomad");
+						}
+					}
+				}
+			
+	}
 	
 	include_once('views/loomavorm.html');
 	
@@ -56,7 +130,8 @@ function lisa(){
 function upload($name){
 	$allowedExts = array("jpg", "jpeg", "gif", "png");
 	$allowedTypes = array("image/gif", "image/jpeg", "image/png","image/pjpeg");
-	$extension = end(explode(".", $_FILES[$name]["name"]));
+	$ajutine = explode(".", $_FILES[$name]["name"]);
+	$extension = end($ajutine);
 
 	if ( in_array($_FILES[$name]["type"], $allowedTypes)
 		&& ($_FILES[$name]["size"] < 100000)
