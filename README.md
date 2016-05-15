@@ -25,3 +25,6 @@ Selguse mõttes tõstsin koduste tööde lahendused eraldi kaustadesse.
 2016-04-28. Lisasin koduse töö number 11 lahenduse.
 
 2016-05-08. Lisasin koduse töö number 12. Koduse töö lahendus on kaustas "Loomaaed". Testida saab tööd Enoses: enos.itcollege.ee/kodused/kaksteist/loomaaed.php
+
+2016-05-15. Lisasin koduse töö number 13. Koduse töö lahendus on kaustas "Loomaaed. Lisasin loomade kuvamise funktsionaalsuse, sisselogimise funktsionaalsuse ja loomade lisamise funktsionaalsuse. Testida saab tööd Enoses:
+enos.itcollege.ee/kodused/kaksteist/loomaaed.php 
