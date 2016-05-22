@@ -1,9 +1,10 @@
-<form action="?page=lisa" method="POST" enctype="multipart/form-data">
+<form action="?page=muuda" method="POST" enctype="multipart/form-data">
+	<input type="hidden" name="id" value="<?php if (isset($loom['id'])) echo htmlspecialchars($loom['id']); ?>"/><br/>
 	<label for="nimi">Nimi: </label><input type="text" name="nimi" placeholder="nimi" value="<?php if (isset($loom['nimi'])) echo htmlspecialchars($loom['nimi']); ?>"/><br/>
 	<label for="puur">Puur: </label><input type="number" name="puur" placeholder="puur" value="<?php if (isset($loom['puur'])) echo htmlspecialchars($loom['puur']); ?>"/><br/>
 	<label for="vanus">Vanus: </label><input type="number" name="vanus" placeholder="vanus" value="<?php if (isset($loom['vanus'])) echo htmlspecialchars($loom['vanus']); ?>"/><br/>
-	<label for="pilt">Näopilt: </label> <input type="file" name="pilt"/><br/>
-	<input type="submit" value="Lisa"/> 
+	<label for="pilt">Näopilt: </label><input type="file" name="pilt"/><br/>
+	<input type="submit" value="Muuda"/> 
 </form>
 <?php if (isset($errors)):?>
 		<?php foreach($errors as $error):?>

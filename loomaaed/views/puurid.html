@@ -3,10 +3,15 @@
 		foreach($puurid as $puur => $v22rtus){
 			?><div class="puur"><h5>Puur number: </h5><?php
 				echo "$puur\n";
-				foreach($v22rtus as $loom){
+				foreach($v22rtus as $loomaid => $loom){
 					?><div>
-						<?php $loom="pildid/".$loom.".png";?>
-						<img src= <?php echo "$loom"; ?> />
+						<?php $loom="pildid/".$loom.".png";
+						 if (isset($_SESSION['user']) && ($_SESSION['roll'] == "admin")) {?>
+							<a href=<?php echo "?page=muuda&id=$loomaid" ?> ><img src= <?php echo "$loom"; ?> /></a>
+						<?php }
+						else { ?>
+							<img src= <?php echo "$loom"; ?> />
+						<?php } ?>
 					</div><?php	
 				}
 			?></div><?php			
