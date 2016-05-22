@@ -28,3 +28,5 @@ Selguse mõttes tõstsin koduste tööde lahendused eraldi kaustadesse.
 
 2016-05-15. Lisasin koduse töö number 13. Koduse töö lahendus on kaustas "Loomaaed. Lisasin loomade kuvamise funktsionaalsuse, sisselogimise funktsionaalsuse ja loomade lisamise funktsionaalsuse. Testida saab tööd Enoses:
 enos.itcollege.ee/kodused/kaksteist/loomaaed.php 
+
+2016-05-22. Lisasin koduse töö number 14. Tehtud töö jaoks tegin eraldi branchi Kodune-14. Parandasin Loomaaia funktsionaalsust: nüüd on võimalik ka olemasolevate loomade muutmine. Lisasin anbmebaasi külastajate tabelisse rolli lahtri. Roll võib olla kas admin või user. Loomi lisada ja muuta saab ainult "admin" rolliga kasutaja. Testida saab tööd Enoses:  enos.itcollege.ee/kodused/kaksteist/loomaaed.php 
